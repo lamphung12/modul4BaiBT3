@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h3>Search</h3>
+<p>
+    <a th:href="@{/product-ex}">
+        Back to Product list
+    </a>
+</p>
+<div id="detail" th:each="f: ${list}">
+    <div class="cusdetail">
+        <label>Id:</label>
+        <label th:text="${f.id}"></label><br>
+        <label>Name:</label>
+        <label th:text="${f.name}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Price:</label>
+        <label th:text="${f.price}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Description:</label>
+        <label th:text="${f.description}"></label>
+    </div>
+</div>
+
+</body>
+</html>

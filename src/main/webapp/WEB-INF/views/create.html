@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Add Customer</h3>
+<p>
+    <a th:href="@{/product-ex}">
+        Back to Products list
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/product-ex/createPost}" method="post" >
+        <label>Id</label>
+        <input type="text" name="id">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="text" name="price">
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" name="description"/>
+        </div>
+        <input type="submit" value="save"/>
+    </form>
+</div>
+
+</body>
+</html>
